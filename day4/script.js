@@ -79,4 +79,103 @@
 //   console.log(num + frnum / Math.pow(10, fr.length));
 // }
 // convetNum([1, 2], [3, 4]);
-// 
+//
+
+// Reverse a Number
+// Input: N = 1234
+// Output: 4321
+// function rev(n) {
+//   let res = "";
+//   while (n > 0) {
+//     res += n % 10;
+//     n = parseInt(n / 10);
+//   }
+//   console.log(Number(res));
+// }
+// rev(1234);
+
+// Remove the Decimal Point Mathematically
+// Input: N = 12.34
+// Output: 1234
+// ✨ Do not use string operations.
+// function remDec(n) {
+//   while (n % 1 !== 0) {
+//     n *= 10;
+//   }
+//   console.log(n);
+// }
+// remDec(12.34)
+
+// Separate Whole and Fractional Parts of a Number
+// Input: N = 5.75
+// Output: Whole = 5, Fraction = 0.75
+// ✨ Use mathematical logic to separate the integer and fractional portions without using built-in functions. Don't use Math.trunc() or Math.floor() method.
+// function sep(n) {
+//   let wh = Number(parseInt(n));
+//   let fr = Number((n - wh).toFixed(n));
+//   console.log(wh, fr);
+// }
+// sep(5.345);
+
+// Generate a Decimal Number from Whole and Fractional Digits
+
+// Input: Whole = [1, 2], Fraction = [3, 4]
+// Output: 12.34
+// ✨ Form the number mathematically by combining the digits from both arrays using powers of 10.
+// function num(n, m) {
+//   let wh = 0;
+//   let fr = 0;
+//   for (let i = 0; i < n.length; i++) {
+//     wh += n[i] * 10 ** (n.length - 1 - i);
+//   }
+//   for (let i = 1; i <= m.length; i++) {
+//     fr += m[i - 1] * 10 ** -i;
+//   }
+//   console.log(wh + fr);
+// }
+// num([1, 2], [4, 3, 4]);
+
+// Check if a Number is a Palindrome
+
+// Input: N = 121
+// Output: Palindrome
+// ✨ Compares original and reversed numbers to detect symmetry.
+// function pali(n) {
+//   let rev = "";
+//   let num = n;
+//   while (num > 0) {
+//     rev += num % 10;
+//     num = parseInt(num / 10);
+//   }
+
+//   if (n === +rev) {
+//     console.log("its Palindrome");
+//   } else {
+//     console.log("its not palindrome");
+//   }
+// }
+// pali(1221);
+
+// Check if a Number is an Armstrong Number (also called a Narcissistic Number)
+
+// Input: N = 153
+// Output: Armstrong Number
+// ✨ Armstrong Number: 1³ + 5³ + 3³ = 153, 1⁴ + 6⁴ + 3⁴ + 4⁴ = 1634.
+// function armstrong(n) {
+//   let arr = []
+//   let num=n
+//   let sum = 0;
+//   while(num>0){
+//     arr.push(num%10)
+//     num= parseInt(num/10)
+//   }
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += Math.pow(arr[i],arr.length)    
+//   }
+//   if (sum === n) {
+//     console.log("its a armstrong Number");
+//   } else {
+//     console.log("its not armstrong number");
+//   }
+// }
+// armstrong(153)
