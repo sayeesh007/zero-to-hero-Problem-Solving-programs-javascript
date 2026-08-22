@@ -170,7 +170,7 @@
 //     num= parseInt(num/10)
 //   }
 //   for (let i = 0; i < arr.length; i++) {
-//     sum += Math.pow(arr[i],arr.length)    
+//     sum += Math.pow(arr[i],arr.length)
 //   }
 //   if (sum === n) {
 //     console.log("its a armstrong Number");
@@ -179,3 +179,19 @@
 //   }
 // }
 // armstrong(153)
+
+// Find the Largest and Smallest Digit in a Number
+// Input: N = 9483
+// Output: Largest = 9, Smallest = 3
+// function largeSamll(n) {
+//   let l = 0,
+//     s = 9;
+//   while (n > 0) {
+//     let digit = n % 10;
+//     if (l < digit) l = digit;
+//     if (s > digit) s = digit;
+//     n = Math.floor(n / 10);
+//   }
+//   console.log("largest=", l, "smallest =", s);
+// }
+// largeSamll(9483)
