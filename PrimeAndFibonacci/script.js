@@ -38,7 +38,7 @@
 //   let temp=0
 //   let a=0;
 //   let b=1;
-  
+
 //   for (let i = 2; i < n; i++) {
 //     // temp = arr[i-2]+arr[i-1]
 //     temp= a+b
@@ -50,3 +50,37 @@
 // }
 // fib(2)
 
+// Find the Nth Fibonacci Number
+
+// Input: N = 8
+// Output: 13
+
+// function nthFibNo(n) {
+//   let arr = [0, 1];
+//   let res = 0;
+//   for (let i = 2; i < n; i++) {
+//     arr[i] = arr[i - 2] + arr[i - 1];
+//   }
+//   console.log(arr);
+//   console.log(arr[n - 1]);
+// }
+// nthFibNo(8);
+
+// Check if a Number Belongs to the Fibonacci Series
+
+// Input: 21
+// Output: Yes
+// function chekFib(n) {
+//   let a=0,b=1
+//   let next=a+b
+//   while (b <= n) {
+//     if (b === n) {
+//       return "yes";
+//     }
+//     a=b
+//     b=next
+//     next=a+b
+//   }
+//   return "no";
+// }
+// console.log(chekFib(21));
