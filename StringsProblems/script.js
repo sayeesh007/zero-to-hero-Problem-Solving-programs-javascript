@@ -245,23 +245,61 @@
 // Input: Main string: "hellothere" Target string: "there"
 
 // Output: true ✨ Manual parsing only; check character by character without using includes, or indexOf.
-function findSubstring(str, tar) {
-  let res = "";
-  for (let index = 0; index < str.length; index++) {
-    let tarIndex = 0,
-      j = 0;
+// function findSubstring(str, tar) {
+//   let res = "";
+//   for (let index = 0; index < str.length; index++) {
+//     let tarIndex = 0,
+//       j = 0;
 
-    while (j < tar.length && str[index] === tar[tarIndex]) {
-      res += tar[tarIndex];
-      j++;
-      tarIndex++;
-      index++;
-    }
-  }
-  if (res === tar) {
-    console.log(true);
-  } else {
-    console.log(false);
-  }
+//     while (j < tar.length && str[index] === tar[tarIndex]) {
+//       res += tar[tarIndex];
+//       j++;
+//       tarIndex++;
+//       index++;
+//     }
+//   }
+//   if (res === tar) {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
+// }
+// findSubstring("hellothere", "there");
+
+// Manual Substring Search (Without Using indexOf)
+// Input: text = "hello world", pattern = "wor"
+// Output: Found at index 6 ✨ Classic naive pattern matching algorithm (two nested loops).
+// function substringIndexSearch(str, sub) {
+//   for (let i = 0; i < str.length; i++) {
+//     let subStart = 0;
+//     while (subStart < sub.length && str[i+subStart] === sub[subStart]) {
+//       subStart++;
+//     }
+//     if (subStart === sub.length) {
+//       console.log("Found at", i);
+//     }
+//   }
+// }
+// substringIndexSearch('hello world','wor')
+
+//  Check if One String is Rotation of Another
+// Input: "abcde", "cdeab"
+// Output: Rotation ✨ Use the trick: second string must be inside (s1 + s1)
+// function checkRotation(str1, str2) {
+//   let s1 = str2.slice(0, str2.indexOf(str1[str1.length - 1]) + 1);
+//   let s2 = str2.slice(str2.indexOf(str1[0]));
+//   if (s2 + s1 == str1) {
+//     return "Rotation";
+//   }
+//   return "not Rotated";
+// }
+// console.log(checkRotation("abcde", "cddeab"));
+
+// one more simple solution
+function checkRotation(str1, str2) {
+  if (str1.length !== str2.length) return "Not rotated";
+  if ((str1 + str1).includes(str2)) return "Rotation";
+  return "Not rotation";
 }
-findSubstring("hellothere", "there");
+console.log(checkRotation('abcde','cdeab'));
+
